@@ -12,7 +12,7 @@ namespace laba1 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm
+	/// Г‘ГўГ®Г¤ГЄГ  Г¤Г«Гї MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -21,13 +21,13 @@ namespace laba1 {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: Г¤Г®ГЎГ ГўГјГІГҐ ГЄГ®Г¤ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г 
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// ГЋГ±ГўГ®ГЎГ®Г¤ГЁГІГј ГўГ±ГҐ ГЁГ±ГЇГ®Г«ГјГ§ГіГҐГ¬Г»ГҐ Г°ГҐГ±ГіГ°Г±Г».
 		/// </summary>
 		~MyForm()
 		{
@@ -46,14 +46,14 @@ namespace laba1 {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// ГЋГЎГїГ§Г ГІГҐГ«ГјГ­Г Гї ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г .
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// Г’Г°ГҐГЎГіГҐГ¬Г»Г© Г¬ГҐГІГ®Г¤ Г¤Г«Гї ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г  вЂ” Г­ГҐ ГЁГ§Г¬ГҐГ­ГїГ©ГІГҐ 
+		/// Г±Г®Г¤ГҐГ°Г¦ГЁГ¬Г®ГҐ ГЅГІГ®ГЈГ® Г¬ГҐГІГ®Г¤Г  Г± ГЇГ®Г¬Г®Г№ГјГѕ Г°ГҐГ¤Г ГЄГІГ®Г°Г  ГЄГ®Г¤Г .
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -71,7 +71,7 @@ namespace laba1 {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(136, 23);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Сформировать пароль";
+			this->button1->Text = L"Г‘ГґГ®Г°Г¬ГЁГ°Г®ГўГ ГІГј ГЇГ Г°Г®Г«Гј";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -83,7 +83,7 @@ namespace laba1 {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(125, 19);
 			this->label1->TabIndex = 1;
-			this->label1->Text = L"Идентификатор";
+			this->label1->Text = L"Г€Г¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г°";
 			// 
 			// textBox1
 			// 
@@ -140,46 +140,46 @@ namespace laba1 {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		char symbol[] = { '!', '\"', '#', '$', '%', '&', '\'', '(', ')', '*', '\0' };
-		char ru_letters[] = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+		char ru_letters[] = "Г ГЎГўГЈГ¤ГҐВёГ¦Г§ГЁГ©ГЄГ«Г¬Г­Г®ГЇГ°Г±ГІГіГґГµГ¶Г·ГёГ№ГєГ»ГјГЅГѕГї";
 		char num[] = "0123456789";
 
-		String^ source = textBox1->Text;	// Присваиваем получаемые данные из тексбокса в строку
+		String^ source = textBox1->Text;		// РџСЂРёСЃРІР°РёРІР°РµРј РїРѕР»СѓС‡Р°РµРјС‹Рµ РґР°РЅРЅС‹Рµ РёР· С‚РµРєСЃР±РѕРєСЃР° РІ СЃС‚СЂРѕРєСѓ
 
-		if (source->Length == 0) {			// Проверяем не пустой ли textbox
-			MessageBox::Show("Введите строку", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		if (source->Length == 0) {			// РџСЂРѕРІРµСЂСЏРµРј РЅРµ РїСѓСЃС‚РѕР№ Р»Рё textbox
+			MessageBox::Show("Г‚ГўГҐГ¤ГЁГІГҐ Г±ГІГ°Г®ГЄГі", "ГЋГёГЁГЎГЄГ ", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			textBox1->Focus();
 			return;
 		}
 
-		int N = source->Length;				// Получаем длину строки 
+		int N = source->Length;				// РџРѕР»СѓС‡Р°РµРј РґР»РёРЅСѓ СЃС‚СЂРѕРєРё 
 		int Q = N % 5;
 
-		label3->Text = Q.ToString();		// Вывод остатка Q 
+		label3->Text = Q.ToString();			// Р’С‹РІРѕРґ РѕСЃС‚Р°С‚РєР° Q 
 
-		const int pass_len = 9;				// Требуемое кол-во символов - 9
-		char password[pass_len];			// Строка-пароль
+		const int pass_len = 9;				// РўСЂРµР±СѓРµРјРѕРµ РєРѕР»-РІРѕ СЃРёРјРІРѕР»РѕРІ - 9
+		char password[pass_len];			// РЎС‚СЂРѕРєР°-РїР°СЂРѕР»СЊ
 
-		srand(time(NULL));					// Инициализируем генератор случайных чисел
+		srand(time(NULL));				// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РіРµРЅРµСЂР°С‚РѕСЂ СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР»
 		
-		password[0] = symbol[rand() % 10];	// b1
-		password[1] = symbol[rand() % 10];	// b2
-		password[pass_len] = '\0';			// Терминирующий ноль, конец строки 
+		password[0] = symbol[rand() % 10];		// b1
+		password[1] = symbol[rand() % 10];		// b2
+		password[pass_len] = '\0';			// РўРµСЂРјРёРЅРёСЂСѓСЋС‰РёР№ РЅРѕР»СЊ, РєРѕРЅРµС† СЃС‚СЂРѕРєРё 
 
 		int i = 2;
 
 		for (; i < pass_len; i++) {
 			if (Q > 1) 
-				for (; i <= Q; i++)			// b1+Q
+				for (; i <= Q; i++)		// b1+Q
 					password[i] = symbol[rand() % 10];
 
 			password[i] = ru_letters[rand() % 33];
 
-			if (i == 8) password[i] = num[rand() % 10]; // b9 случайная цифра
+			if (i == 8) password[i] = num[rand() % 10]; // b9 СЃР»СѓС‡Р°Р№РЅР°СЏ С†РёС„СЂР°
 		}
 			
 		System::String^ res = gcnew System::String(password);
-		label4->Text = res->Replace("&", "&&");	// Вывод строки с паролем
-		// Replace("&", "&&") нужен для корректного вывода этого символа...
+		label4->Text = res->Replace("&", "&&");	// Р’С‹РІРѕРґ СЃС‚СЂРѕРєРё СЃ РїР°СЂРѕР»РµРј
+		// Replace("&", "&&") РЅСѓР¶РµРЅ РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РІС‹РІРѕРґР° СЌС‚РѕРіРѕ СЃРёРјРІРѕР»Р°...
 		
 	}
 	};
